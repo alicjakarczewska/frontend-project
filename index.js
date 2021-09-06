@@ -7,5 +7,6 @@ import { externalModule } from './js/myModule';
  * Import your styles!
  */
 import './styles/main.scss';
-
-externalModule.greet();
+/**
+* externalModule.greet();
+*/
