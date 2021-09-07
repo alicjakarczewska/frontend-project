@@ -5,89 +5,122 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Zonifero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ad969e924e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <section class="container">
         <!--menu-->
         <div class="menu">
-            <div class="menu__logo">
-                Zonifero
-            </div>
-            <nav class="menu__navTop">
-                <nav class="menu__navTopLeft">
-                    <ul>
-                        <li>Zonifero products</li>
-                        <li>Store</li>
-                        <li>Blog</li>
+
+            <div class="menu__wrapperTop">
+                <div class="menu__logo">
+                    <img src="./images/Images/logo.png" alt="logo" />
+                </div>
+    
+                <nav class="menu__navTop">
+                    <ul class="menu__navTopLeft">                 
+                        
+                            <li>Zonifero products</li>
+                            <li>Store</li>
+                            <li>Blog</li>
+                        
                     </ul>
-                </nav>
-                <nav class="menu__navTopMiddle">
-                    World
-                </nav>
-                <nav class="menu__navTopRight">
-                    <button class="menu__btnSignIn">Sing in</button>
-                    <button class="menu__btnGetTheApp">Get the app</button>
+                    <nav class="menu__navTopMiddle">
+                        <img src="./images/Images/globe.png" alt="globe" />
+                        <i class="fas fa-chevron-down" style="color:#2A2A2A;width:11px;height:6px"></i>
+                    </nav>
+                    <nav class="menu__navTopRight">
+                        <button class="menu__btnSignIn">Sing in</button>
+                        <button class="menu__btnGetTheApp">Get the app</button>
+                    </nav>                
                 </nav>
 
+
+            </div>            
+
+            <nav class="menu__navDown">                
+                    <li><a class="tab">zonifero WorkPlace:</a></li>
+                    <li><a class="tab">Overview</a></li>
+                    <li><a class="tab">Features</a></li>
+                    <li><a class="tab">Specs</a></li>
+                    <li><a class="tab">FAQ</a></li>
+                    <li><a class="tab">Contact</a></li>                
             </nav>
-            <nav class="menu__navDown">
-                <ul>
-                    <li>zonifero WorkPlace:</li>
-                    <li>Overview</li>
-                    <li>Features</li>
-                    <li>Specs</li>
-                    <li>FAQ</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
+            
         </div>
 
         <header class="header">
-
             <section class="header__main">
-                <h1 class="header__title">Streamline your workplace</h1>
-                <h2 class="header__text">
-                    Effectively and quickly from your mobile device.
-                    Staying connected has never been easier with
-                    zonifero WorkPlace.
-                </h2>
-                <button class="header__btn">google play</button>
-                <button class="header__btn">app store</button>
-                <img src="./images/Images/hand.png" alt="hand">
-                <img src="./images/Images/desks.png" alt="desks">
+                <div class="header__mainText">
+                    <span class="header__title big-headline-text">Streamline <br /> your workplace</span>
+                    <span class="header__text description-text">
+                        Effectively and quickly from your mobile device.<br />
+                        Staying connected has never been easier with<br />
+                        zonifero WorkPlace.
+                    </span>
+                    <button class="header__btn" style="width:420px;height:70px;background-color: black;">google play</button>
+                    <!-- <button class="header__btn">app store</button> -->
+                </div>
+                <div class="header__mainImages">
+                    <img src="./images/Images/hand.png" class="handImage" alt="hand">
+                    <img src="./images/Images/desks.png" class="desksImage" alt="desks">
+                </div>            
+                
             </section>
 
             <section class="header__lists">
                 <div class="header__listItem">
-                    <h3>Management</h3>
-                    <a>
+                    <h2>Management</h2>
+                    <p>
                         Tools for real-time management of all your facilities and people across multiple sites. Ease, speed and effectiveness of facilities communications.
-                    </a>
+                    </p>
                 </div>
                 <div class="header__listItem">
-                    <h3>Employees</h3>
-                    <a>
+                    <h2>Employees</h2>
+                    <p>
                         Improved productivity and satisfaction as your employees stay informed, connected and can feed requests and updates in real time
-                    </a>
+                    </p>
                 </div>
                 <div class="header__listItem">
-                    <h3>Visitors</h3>
-                    <a>
+                    <h2>Visitors</h2>
+                    <p>
                         A smooth and welcoming visitor experience – easy navigation around your facilities.
-                    </a>
+                    </p>
                 </div>
             </section>
         </header>
 
-        <section class="tilesProblemSolving">
+        <section class="problemSolving">
             <!--kafelki Problem solving app-->
-            <span>Problem solving app</span>
-            <ul>
-                <li>
-
-                </li>
-            </ul>
-
+            <h4>Problem solving app</h4>
+            <div class="problemSolving__tiles">
+                <div class="problemSolving__tile">
+                    <img src="./images/Images/desk_icon.png" class="problemSolving__image">
+                    <h3 class="problemSolving__title">Use yout time <br/> and space smarter</h3>
+                    <p class="problemSolving__text">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>                    
+                </div>
+                <div class="problemSolving__tile">
+                    <img src="./images/Images/desk_icon.png" class="problemSolving__image">
+                    <h3 class="problemSolving__title">Use yout time <br/> and space smarter</h3>
+                    <p class="problemSolving__text">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>                    
+                </div>
+                <div class="problemSolving__tile">
+                    <img src="./images/Images/desk_icon.png" class="problemSolving__image">
+                    <h3 class="problemSolving__title">Use yout time <br/> and space smarter</h3>
+                    <p class="problemSolving__text">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>                    
+                </div>
+                <div class="problemSolving__tile">
+                    <img src="./images/Images/desk_icon.png" class="problemSolving__image">
+                    <h3 class="problemSolving__title">Use yout time <br/> and space smarter</h3>
+                    <p class="problemSolving__text">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>                    
+                </div>
+                <div class="problemSolving__tile">
+                    <img src="./images/Images/desk_icon.png" class="problemSolving__image">
+                    <h3 class="problemSolving__title">Use yout time <br/> and space smarter</h3>
+                    <p class="problemSolving__text">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>                    
+                </div>
+            </div>
         </section>
 
         <section class="features">
@@ -309,46 +342,90 @@
             <div class="product_title">Zonifero product family</div>
         </section>
 
+        <section class="products">
+            <h4>Zonifero product family</h4>
+            <div class="product__tiles">
+                <div class="product__tile">                    
+                    <img src="./images/Images/mob_.png" class="product__image">  
+                    <div class="textwrapper">
+                        <h3 class="product__title">zonifero</h3>
+                        <a class="product__subtitle big-headline-text">Lobby</a>
+                        <p class="product__text">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Morbi tempor ligula nec<br/> fermentum tempor. </p>  
+                    </div>                                                        
+                </div>
+                <div class="product__tile">                    
+                    <img src="./images/Images/mob_.png" class="product__image">  
+                    <div class="textwrapper">
+                        <h3 class="product__title">zonifero</h3>
+                        <a class="product__subtitle big-headline-text">Passport</a>
+                        <p class="product__text">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Morbi tempor ligula nec<br/> fermentum tempor. </p>  
+                    </div>                                                        
+                </div>
+                <div class="product__tile">                    
+                    <img src="./images/Images/mob_.png" class="product__image">  
+                    <div class="textwrapper">
+                        <h3 class="product__title">zonifero</h3>
+                        <a class="product__subtitle big-headline-text">Services</a>
+                        <p class="product__text">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Morbi tempor ligula nec<br/> fermentum tempor. </p>  
+                    </div>                                                        
+                </div>
+                <div class="product__tile">                    
+                    <img src="./images/Images/mob_.png" class="product__image">  
+                    <div class="textwrapper">
+                        <h3 class="product__title">zonifero</h3>
+                        <a class="product__subtitle big-headline-text">TV</a>
+                        <p class="product__text">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Morbi tempor ligula nec<br/> fermentum tempor. </p>  
+                    </div>                                                        
+                </div>
+                
+            </div>
+        </section>
+
 
         <footer class="footer">
             <!--Lists-->
-            <div class="footer__list">
-                <div class="footer__listTitle">
-                    Products:
+            <div class="footer__lists">
+                <div class="footer__list">
+                    <div class="footer__listTitle">
+                        <ul>Products:</ul>
+                    </div>
+                    <div class="footer__listItem">
+                        <ul>zonifero business</ul>
+                        <ul>zonifero real estate</ul>
+                        <ul>zonifero lobby</ul>
+                        <ul>zonifero services</ul>
+                        <ul>zonifero tv</ul>
+                    </div>
                 </div>
-                <div class="footer__listItem">
-                    zonifero business
-                    zonifero real estate
-                    zonifero lobby
-                    zonifero services
-                    zonifero tv
+                <div class="footer__list">
+                    <div class="footer__listTitle">
+                        <ul>Resources:</ul>
+                    </div>
+                    <div class="footer__listItem">
+                        <ul>Documentation</ul>
+                        <ul>FAQ</ul>
+                        <ul>Blog</ul>
+                        <ul>Media</ul>
+                    </div>
                 </div>
-            </div>
-            <div class="footer__resources">
-                <div class="footer__listTitle">
-                    Resources:
-                </div>
-                <div class="footer__listItem">
-                    Documentation
-                    FAQ
-                    Blog
-                    Media
-                </div>
-            </div>
-            <div class="footer__about">
-                <div class="footer__listTitle">
-                    About:
-                </div>
-                <div class="footer__listItem">
-                    About us
-                    Company
-                    Blog
+                <div class="footer__list">
+                    <div class="footer__listTitle">
+                        <ul>About:</ul>
+                    </div>
+                    <div class="footer__listItem">
+                        <ul>About us</ul>
+                        <ul>Company</ul>
+                        <ul>Blog</ul>
+                    </div>
                 </div>
             </div>
             <!-- kreska -->
+            <div class="footer__hr">
+                <hr>
+            </div>
             <!--Footer "logo"-->
-            <div class="footer__logo">
-                X
+            <div class="footer__logo">                
+                <img src="./images/Images/ex_logo.png" alt="ex_logo">
             </div>
 
         </footer>
