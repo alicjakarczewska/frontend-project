@@ -41,6 +41,30 @@ $space: 340px;
   @media (min-width: 1800px) { @content; }
 }
 
+@mixin h0($color: $product-color) {
+  font-family: $primary-font;
+  color: $color;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: -3px;
+}
+
+@mixin button-design {
+  background-color: Transparent; 
+  outline: none;
+  border: none;
+  color: $text-color;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: $secondary-font;
+  font-weight: $font-regular;
+  color: white;
+  background-color: $product-color;
+  padding: $small $large;
+  font-weight: $font-ligth;
+}
 
 h1 {
   font-family: $primary-font;
@@ -749,10 +773,11 @@ padding-top: $large;
 }
 
 .bringTo21St__text {
-  margin-top: $xx-large;
+  margin-top: $x-large;
 }
 .bringTo21St__img {
-  margin-bottom: $large;
+  margin-bottom: $x-large;
+  margin-left: $large;
 }
 
 .bringTo21St__down {
@@ -909,6 +934,62 @@ justify-content: space-between;
     margin:0;
     padding:0;
     width: 530px;
+  }
+}
+
+.store {
+  padding: $xx-large $space $large;
+  display: flex;
+  flex-direction: row;
+  margin-top: $xx-large;
+  background-color: $background-color;
+  // justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {    
+    @include h0($text-color);
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    
+  }
+
+  &__text {
+    width: 320px;
+    margin: $base 0;
+  }
+
+  &__btn {
+    @include button-design();
+    width: 205px;
+  }
+
+  &__right {
+    position: relative; 
+    margin-left: 1.8 * $xx-large;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__imgPrinter {
+    position: absolute; 
+    z-index:3;
+  }
+
+  &__imgLobby {
+    position: absolute; 
+    z-index:2;
+    left:150px;
+  }
+
+  &__imgUchwyt {
+    position: absolute; 
+    z-index:1;
+    left:410px;
   }
 
 }
