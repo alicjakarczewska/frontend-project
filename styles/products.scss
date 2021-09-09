@@ -5,9 +5,20 @@
   padding-top: $xx-large;
   background-color: white;
 
-  @include for-phone-only {    
-    display: none;
- }
+  &__mainTitle{
+
+    @include h4;  
+
+    @include for-phone-only {
+      margin: $small;
+    }
+  }
+
+  @include for-phone-only {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $large;
+  }
 }
 
 .product__tiles {
@@ -23,6 +34,18 @@
   margin-bottom: $x-large;
   width: 450px;
   padding: 0;
+
+  @include for-phone-only {
+    display: none;
+
+    &--mobile{
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  
 }
 
 .product__tile h3 {
@@ -43,6 +66,12 @@
   position: absolute;
   top: $large;
   left: $large;
+
+  @include for-phone-only {
+    position: absolute;
+    top: $large;
+    left: $base;
+  }
 }
 
 .products__image {  
@@ -61,7 +90,7 @@
   border:0;
   position: absolute;
   top: 8px;
-  left: 16px;
+  left: 16px;  
 }
 
 .products__text {

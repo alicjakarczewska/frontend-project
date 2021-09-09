@@ -10,13 +10,21 @@
         display: flex;
         flex-direction: row;
         width: 30%;
-        // justify-content: space-between;
         margin-bottom: $x-large;
+
+        @include for-phone-only {
+            width: 100%;
+            margin-bottom: $large;
+        }
     }
 
     &__navItem {
         @include tab;
         margin-left: $base;
+
+        @include for-phone-only {
+            margin: 0 $small 0 0;
+        }
     }
 
     &__form {
@@ -28,16 +36,25 @@
         grid-template-areas:
         "contact__formItem-name contact__formItem-lastname"
         "contact__formItem-phone contact__formItem-email"
-        "contact__formItem-message contact__formItem-message";       
+        "contact__formItem-message contact__formItem-message";  
+        
+        @include for-phone-only {
+            display: flex;
+            flex-flow: column;
+        }
     }
 
     &__formItem {
         border-bottom: 1px dashed #2A2A2A;
+        @include for-phone-only {
+            width: 100%;
+        }
 
     }
 
-    &__formItem-message {      
+    &__formItem-message {  
     }
+    
 
     &__formItemLabel {
         font-size: 13px;
@@ -56,7 +73,11 @@
         font-weight: $font-regular;
         width: 6 * $x-large;        
         @include description-text();
-        @include placeholder-color($text-color);     
+        @include placeholder-color($text-color); 
+        
+        @include for-phone-only {
+            width: 100%;
+        }
         
     }
 
@@ -66,8 +87,9 @@
         @include button-design();
     }
 
-    @include for-phone-only {    
-        display: none;
-     }
-
+    @include for-phone-only {
+        margin: $small $small $large $small;
+        padding: 0;
+        align-items: center;
+    }
 }

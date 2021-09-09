@@ -103,9 +103,23 @@ button {
   background-color: white;
 }
 
+.products__mainTitle {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 17px;
+}
+
+@media (max-width: 599px) {
+  .products__mainTitle {
+    margin: 20px;
+  }
+}
+
 @media (max-width: 599px) {
   .products {
-    display: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
   }
 }
 
@@ -121,6 +135,17 @@ button {
   margin-bottom: 90px;
   width: 450px;
   padding: 0;
+}
+
+@media (max-width: 599px) {
+  .product__tile {
+    display: none;
+  }
+  .product__tile--mobile {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .product__tile h3 {
@@ -140,6 +165,14 @@ button {
   position: absolute;
   top: 60px;
   left: 60px;
+}
+
+@media (max-width: 599px) {
+  .textwrapper {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+  }
 }
 
 .products__image {

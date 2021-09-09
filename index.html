@@ -421,7 +421,7 @@
                 Can I use Zonifero anywhere in world?<br/>
                 I’ve got a problem, how do I contact support?<br/>
             </div>
-            <div class="faq__questions">
+            <div class="faq__questions faq__questions--last">
                 Is Zonifero owned by SoftwareHut?<br/>
                 How does Zonifero work?<br/>
                 How does Zonifero’s pricing work?<br/>
@@ -438,23 +438,23 @@
             <form class="contact__form">
                 <div class="contact__formItem contact__formItem-name">
                     <label class="contact__formItemLabel" for="fname">First name *</label><br/>
-                    <input class="contact__formItemInput" type="text" id="fname" name="fname">
+                    <input class="contact__formItemInput" type="text" id="fname" name="fname" placeholder="John">
                 </div>
                 <div class="contact__formItem contact__formItem-lastname">
                     <label class="contact__formItemLabel" for="lname">Family name *</label><br/>
-                    <input class="contact__formItemInput" type="text" id="lname" name="lname">
+                    <input class="contact__formItemInput" type="text" id="lname" name="lname" placeholder="Wick">
                 </div>
                 <div class="contact__formItem contact__formItem-phone">
                     <label class="contact__formItemLabel" for="yphone">Your phone</label><br/>
-                    <input class="contact__formItemInput" type="text" id="yphone" name="yphone">
+                    <input class="contact__formItemInput" type="text" id="yphone" name="yphone" placeholder="johnwick@hollywood.com">
                 </div>
                 <div class="contact__formItem contact__formItem-email">
                     <label class="contact__formItemLabel" for="yemail">Your e-mail *</label><br/>
-                    <input class="contact__formItemInput" type="text" id="yemail" name="yemail" placeholder="johnwick@hollywood.com">
+                    <input class="contact__formItemInput" type="text" id="yemail" name="yemail" placeholder="+48 605 708 904">
                 </div>
                 <div class="contact__formItem contact__formItem-message">
                     <label class="contact__formItemLabel" for="message">Message *</label><br/>
-                    <input class="contact__formItemInput" type="text" id="message" name="message">                    
+                    <input class="contact__formItemInput" type="text" id="message" name="message" placeholder="Hello :) I’m just wondering if you could..">                          
                 </div>
                 
             </form>
@@ -464,9 +464,12 @@
         </div>
 
         <section class="products">
-            <h4>Zonifero product family</h4>
+            <div class="products__mainTitle">
+                <!-- <h4>Zonifero product family</h4> -->
+                Zonifero product family
+            </div>            
             <div class="product__tiles">
-                <div class="product__tile">                    
+                <div class="product__tile product__tile--mobile">                    
                     <img src="./images/Images/mob_.png" class="product__image">  
                     <div class="textwrapper">
                         <h3 class="product__title">zonifero</h3>

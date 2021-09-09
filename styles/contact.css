@@ -111,6 +111,13 @@ button {
   margin-bottom: 90px;
 }
 
+@media (max-width: 599px) {
+  .contact__nav {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
 .contact__navItem {
   font-family: "Roboto", sans-serif;
   size: 17px;
@@ -124,6 +131,12 @@ button {
   text-decoration: underline solid #01ffcb 3px;
 }
 
+@media (max-width: 599px) {
+  .contact__navItem {
+    margin: 0 20px 0 0;
+  }
+}
+
 .contact__form {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -133,8 +146,21 @@ button {
   grid-template-areas: "contact__formItem-name contact__formItem-lastname" "contact__formItem-phone contact__formItem-email" "contact__formItem-message contact__formItem-message";
 }
 
+@media (max-width: 599px) {
+  .contact__form {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
 .contact__formItem {
   border-bottom: 1px dashed #2A2A2A;
+}
+
+@media (max-width: 599px) {
+  .contact__formItem {
+    width: 100%;
+  }
 }
 
 .contact__formItemLabel {
@@ -180,6 +206,12 @@ button {
   color: #000000;
 }
 
+@media (max-width: 599px) {
+  .contact__formItemInput {
+    width: 100%;
+  }
+}
+
 .contact__btn {
   margin-top: 40px;
   width: 240px;
@@ -201,6 +233,8 @@ button {
 
 @media (max-width: 599px) {
   .contact {
-    display: none;
+    margin: 20px 20px 60px 20px;
+    padding: 0;
+    align-items: center;
   }
 }

@@ -8,6 +8,7 @@
     margin-top: $xx-large;
     justify-content: space-between;
     align-items: flex-start;
+    flex-flow: wrap;
     
   
     &__title {    
@@ -16,6 +17,9 @@
       line-height: 60px;
       letter-spacing: -1px;
       width: 2.25 * $xx-large;
+      @include for-phone-only {    
+        margin-bottom: $small;
+     }
       
     }
   
@@ -23,6 +27,12 @@
       @include h4;
       width: 2.5 * $xx-large;
       line-height: $base;
+
+      &--last {
+        @include for-phone-only {    
+          display: none;
+       }
+      }
     }
   
     &__answer {
@@ -35,8 +45,9 @@
       }
     }
     
-    @include for-phone-only {    
-      display: none;
+    @include for-phone-only {
+      padding: 0;
+      margin: 0 0 $xx-large $small;      
    }
   }
   

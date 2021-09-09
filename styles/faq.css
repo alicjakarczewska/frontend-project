@@ -104,6 +104,7 @@ button {
   margin-top: 120px;
   justify-content: space-between;
   align-items: flex-start;
+  flex-flow: wrap;
 }
 
 .faq__title {
@@ -118,12 +119,24 @@ button {
   width: 270px;
 }
 
+@media (max-width: 599px) {
+  .faq__title {
+    margin-bottom: 20px;
+  }
+}
+
 .faq__questions {
   font-family: "Roboto", sans-serif;
   color: #000000;
   font-size: 17px;
   width: 300px;
   line-height: 30px;
+}
+
+@media (max-width: 599px) {
+  .faq__questions--last {
+    display: none;
+  }
 }
 
 .faq__answer {
@@ -138,6 +151,7 @@ button {
 
 @media (max-width: 599px) {
   .faq {
-    display: none;
+    padding: 0;
+    margin: 0 0 120px 20px;
   }
 }
