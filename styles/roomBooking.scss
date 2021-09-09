@@ -1,0 +1,40 @@
+@import './main';
+
+
+.roomBooking {
+    display: flex;
+    flex-direction: row;
+    margin-left: $space;
+    margin-right: $space;
+    margin-top: $large;
+    justify-content: space-between;
+    margin-bottom:0;
+    padding:0;
+    outline:0;
+    background-color: white;
+  }
+  
+  .roomBooking__textWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .roomBooking__title {
+  padding-top: $large;
+  }
+  
+  .roomBooking__text {
+    width: 412px;
+  }
+  
+  .roomBooking__phone {
+    margin:0;
+    padding:0;
+  }
+  
+  .roomBooking__phoneText {
+    padding-top: $x-large;
+    line-height: $base;
+    margin-right: $xx-large;
+  
+  }

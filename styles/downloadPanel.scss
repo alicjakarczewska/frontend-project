@@ -1,0 +1,57 @@
+@import './main';
+
+
+.downloadPanel {
+  margin: $large $space*0.9;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: $x-small;
+  padding-bottom: $x-small;
+  align-items: center;
+}
+
+.downloadPanel__title {
+  margin-left:$space*0.1;
+}
+
+.downloadPanel__spec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.downloadPanel__specElem {
+  padding: 0 $small;  
+}
+
+.downloadPanel__specElem_light p {
+  opacity: 0.05;
+  font-size: 50px;
+  padding: 0 $small; 
+  font-weight: $font-ligth;
+}
+
+
+.downloadPanel_btn {
+  margin-right:$space*0.1;
+
+  background-color: Transparent; 
+  outline: none;
+  border: none;
+  color: $text-color;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  // display: inline-block;
+  font-size: 17px;
+  font-family: $secondary-font;
+  font-weight: $font-regular;
+
+  color: white;
+  background-color: $product-color;
+  padding: $small $large;
+  font-weight: $font-ligth;
+}

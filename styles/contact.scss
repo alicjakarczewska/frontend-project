@@ -1,0 +1,69 @@
+@import './main';
+
+.contact {
+    margin: $large $space 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        // justify-content: space-between;
+        margin-bottom: $x-large;
+    }
+
+    &__navItem {
+        @include tab;
+        margin-left: $base;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        column-gap: $xx-large;
+        row-gap: $medium;
+        grid-template-areas:
+        "contact__formItem-name contact__formItem-lastname"
+        "contact__formItem-phone contact__formItem-email"
+        "contact__formItem-message contact__formItem-message";       
+    }
+
+    &__formItem {
+        border-bottom: 1px dashed #2A2A2A;
+
+    }
+
+    &__formItem-message {      
+    }
+
+    &__formItemLabel {
+        font-size: 13px;
+        font-weight: $font-ligth;
+        font-family: $secondary-font;
+        color: $text-color;
+    }
+
+    &__formItemInput {
+        border: none;
+        background: transparent;      
+        font-family: $secondary-font;
+        size: 30px;
+        height: $large;
+        color: $text-color;
+        font-weight: $font-regular;
+        width: 6 * $x-large;        
+        @include description-text();
+        @include placeholder-color($text-color);     
+        
+    }
+
+    &__btn {
+        margin-top: $medium;
+        width: 2 * $xx-large;
+        @include button-design();
+    }
+
+}

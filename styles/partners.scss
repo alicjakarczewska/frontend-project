@@ -1,0 +1,35 @@
+@import './main';
+
+.partners {
+    margin-left: $space;
+    margin-right: $space;
+    display: flex;
+    flex-direction: column;
+  
+  
+  &__title h2 {
+    font-size: 50px;
+    letter-spacing: -2px;
+  
+  }
+  
+  &__text {
+    margin-bottom: $large;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  &__listItem {
+    display: flex;
+    flex-direction: column;
+    width: 301px;
+  }
+  
+  &__listItemImage {
+    margin-bottom: $medium;
+  }
+}

@@ -1,0 +1,79 @@
+@import './main';
+
+.header {  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header__main {
+    padding-left: $space;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .header__mainText {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header__lists {
+    display: flex;
+    flex-direction: row;
+    // background-color: red;
+    background-color: $background-color;
+    padding-left: $space;
+    padding-top: $medium;
+    margin-top: $base;
+    z-index: 4;
+  }
+  
+  .header__listItem {
+    width: 310px;
+    margin-right: $xx-large;
+  }
+  
+  .header__title {
+    padding-top: 170px;
+    padding-bottom: $medium;
+  }
+  
+  .header__text{
+    padding-bottom: $base;
+  }
+  
+  .header .header__mainText .header__btn {
+    margin-bottom: $x-large;
+  }
+  
+  .header__mainImages {
+    position:relative; 
+    z-index:1;
+    margin-top: $medium;
+    margin-left: $large;
+  }
+  
+  .header__storeIcons {
+    width:420px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+  }
+  
+   .header__storeIconImg {
+    height:60px;
+  }
+  
+  .handImage {
+    z-index:3;
+    position: absolute;
+    left: $x-large;
+  }
+  
+  .desksImage {
+    z-index:2;
+    position:absolute;
+    left: $base;
+    top: $xx-large;
+  }

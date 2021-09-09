@@ -96,3 +96,58 @@ button {
   outline: 0;
   background-color: white;
 }
+
+.footer {
+  background-color: #3146ff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 599px) {
+  .footer {
+    flex-flow: column;
+    padding: 0;
+  }
+}
+
+.footer__lists {
+  display: flex;
+  flex-wrap: row wrap;
+  list-style: none;
+  padding: 340px;
+  padding-top: 90px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 599px) {
+  .footer__lists {
+    flex-flow: column;
+    padding: 0;
+  }
+}
+
+.footer__list {
+  padding-right: 120px;
+}
+
+.footer__listTitle {
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.footer hr {
+  border: 0;
+  height: 1px;
+  opacity: 0.2;
+  background-color: #E8E9EB;
+}
+
+.footer__logo img {
+  float: right;
+  padding-right: 30px;
+  padding-top: 40px;
+  padding-bottom: 120px;
+}

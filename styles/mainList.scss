@@ -1,0 +1,52 @@
+@import './main';
+
+.mainList {
+  margin:0;
+  padding:0;  
+  outline:0;
+  margin-left: $space*0.9;
+  margin-right: $space*0.9;
+}
+
+
+.mainListItem {
+  font-family: $primary-font;
+  color: $text-color;
+  font-size: 19px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  height: $large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 0 $space*0.1;
+}
+
+
+
+.mainList ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid rgb(243, 243, 243);
+  border-left: none;
+  border-right: none;
+  margin:0; 
+}
+
+.mainList ul li {
+  // padding: 8px 16px;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  margin:0;  
+}
+
+.mainList ul li:last-child {
+  border-bottom: none;
+  margin:0;
+}
+
+
+.mainListItem:active {
+  color: $product-color;
+}

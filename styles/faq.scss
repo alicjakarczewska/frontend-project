@@ -1,0 +1,38 @@
+@import './main';
+
+.faq {
+
+    padding: $large $space;
+    display: flex;
+    flex-direction: row;
+    margin-top: $xx-large;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+  
+    &__title {    
+      @include h0($text-color);
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: -1px;
+      width: 2.25 * $xx-large;
+      
+    }
+  
+    &__questions {
+      @include h4;
+      width: 2.5 * $xx-large;
+      line-height: $base;
+    }
+  
+    &__answer {
+      margin-top: $base;
+      margin-bottom: $medium;
+      font-weight: $font-ligth;
+  
+        &--underlined {
+          text-decoration: underline;
+      }
+    }
+  }
+  

@@ -1,0 +1,108 @@
+@import './main';
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    // border: dotted 5px red;
+    position: sticky;
+    top: 0;  
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    z-index:10;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu__wrapperTop {
+    // border: solid 5px blue;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    outline:0;
+  }
+  
+  .menu__logo {
+    // border: solid 5px green;
+    padding-left: $x-large;
+  }
+  
+  .menu__navTop {
+    // border: solid 5px yellow;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    // width: 790px;
+    justify-content: space-between;
+    
+    
+  }
+  
+  // world icon
+  .menu__navTopMiddle {
+    // border: solid 5px black;
+    padding-left: $base;
+    padding-right: $base;
+  }
+  
+  .menu__navTopRight {
+    // border: solid 5px pink;
+  }
+  
+  .menu__navTopRight button {
+    background-color: Transparent; 
+    outline: none;
+    border: none;
+    color: $text-color;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 17px;
+    font-family: $secondary-font;
+    font-weight: $font-regular;
+  }
+  
+  .menu .menu__btnGetTheApp {
+    color: white;
+    background-color: $product-color;
+    padding-right: $xx-large + 20px;
+    padding-top: $large;
+    padding-left: $medium;
+    font-weight: $font-ligth;
+  }
+  
+  .menu__navTopLeft {
+    // border: solid 5px red;
+    padding: 0;
+    padding-right: $base;
+    margin: 0;
+    font-size: 13px;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row;
+  }
+  
+  .menu__navTopLeft li {
+    padding-right: $base;
+    padding-left: $base;
+  }
+  
+  
+  
+  .menu__navDown {
+    // border: solid 5px purple;
+    padding-left: $space;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }

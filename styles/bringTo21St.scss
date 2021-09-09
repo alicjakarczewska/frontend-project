@@ -1,0 +1,44 @@
+@import './main';
+
+.bringTo21St {
+    margin-left: $space;
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__textWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-top: $x-large;
+    }
+
+    &__text {
+        margin-top: $x-large;
+    }
+
+    &__img {
+        margin-bottom: $x-large;
+        margin-left: $large;
+    }
+
+    &__down {
+        margin-right: $space;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__downItem {
+        display: flex;
+        flex-direction: column;  
+        width: 520px;
+    }
+}

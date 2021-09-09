@@ -1,0 +1,54 @@
+@import './main';
+
+.footer {
+    background-color: $product-color;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: $secondary-font;
+    font-weight: $font-ligth;
+  
+    @include for-phone-only {    
+      flex-flow: column;
+      padding: 0;
+   }
+  
+  }
+  
+  .footer__lists {
+    display: flex;
+    flex-wrap: row wrap;  
+    list-style: none; 
+    padding: $space;
+    padding-top: $x-large;
+    padding-bottom: $xx-large;
+  
+    @include for-phone-only {    
+      flex-flow: column;
+      padding: 0;
+   }
+    
+  }
+  
+  .footer__list {
+    padding-right: $xx-large;
+  }
+  
+  .footer__listTitle {
+    font-weight: $font-bold;
+    padding-bottom: $small;
+  }
+  
+  .footer hr {
+    border: 0;
+    height: 1px;
+    opacity: 0.2;
+    background-color: #E8E9EB;
+  }
+  
+  .footer__logo img {
+    float: right;
+    padding-right: $base;
+    padding-top: $medium;
+    padding-bottom: $xx-large;
+  }

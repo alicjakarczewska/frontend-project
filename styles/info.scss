@@ -1,0 +1,22 @@
+@import './main';
+
+.info {
+    margin: 0 $space;
+    margin-top: $large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__itemTitle {
+  
+  }
+  
+  &__itemText {
+    width: 528px;
+  }
+}

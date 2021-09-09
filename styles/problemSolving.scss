@@ -1,0 +1,29 @@
+@import './main';
+
+.problemSolving {
+    margin-left: $space;
+    margin-top: $xx-large;
+  }
+  
+  .problemSolving__tiles {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .problemSolving__tile {
+    background-color: white;
+    padding: $large;
+    margin-right: $small;
+  }
+  
+  .problemSolving__image {
+    margin-bottom: $large;
+    
+  }
+  
+  .problemSolving__title {
+    width: 200px;
+  }
+  
+  .problemSolving__text {
+  }

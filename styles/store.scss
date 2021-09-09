@@ -1,0 +1,58 @@
+@import './main';
+
+.store {
+    padding: $xx-large $space;
+    display: flex;
+    flex-direction: row;
+    margin-top: $xx-large;
+    background-color: $background-color;
+  
+    &__left {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__title {    
+      @include h0($text-color);
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: -1px;
+      
+    }
+  
+    &__text {
+      width: 320px;
+      margin: $x-small 0;
+    }
+  
+    &__btn {
+      @include button-design();
+      width: 205px;
+    }
+  
+    &__right {
+      position: relative; 
+      margin-left: 1.8 * $xx-large;
+      top: $large;
+      display: flex;
+      align-items: flex-end;
+    }
+  
+    &__imgPrinter {
+      position: absolute; 
+      z-index:3;
+    }
+  
+    &__imgLobby {
+      position: absolute; 
+      z-index:2;
+      left:150px;
+    }
+  
+    &__imgUchwyt {
+      position: absolute; 
+      z-index:1;
+      left:410px;
+    }
+  
+  }

@@ -1,0 +1,57 @@
+@import './main';
+
+.ekosystem {
+    margin: $xx-large $space 0;
+    display: flex;
+    flex-direction: column;
+  
+  
+    &__top {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  
+    &__topWrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__topImage {
+      img {
+        object-fit: scale-down;
+      }
+    }
+  
+    &__title {
+      width: 665px;
+      margin-bottom: $x-large;
+    }
+  
+    &__text {
+      width: 724px;
+      margin-bottom: $x-large;
+    }
+  
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    &__bottomItem {
+      display: flex;
+      flex-direction: column;
+      margin-right: $space;
+      justify-content: space-between;
+    }
+  
+    &__bottomItemTitle {
+      margin-bottom: $medium;
+    }
+  
+    &__bottomItemText {
+      margin:0;
+      padding:0;
+      width: 530px;
+    }
+  }
