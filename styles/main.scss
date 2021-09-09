@@ -25,6 +25,62 @@ $font-bold: 700;
 $space: 340px;
 
 
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}
+
+@mixin h0($color: $product-color) {
+  font-family: $primary-font;
+  color: $color;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: -3px;
+}
+
+@mixin button-design {
+  background-color: Transparent; 
+  outline: none;
+  border: none;
+  color: $text-color;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: $secondary-font;
+  font-weight: $font-regular;
+  color: white;
+  background-color: $product-color;
+  padding: $small $large;
+  font-weight: $font-ligth;
+}
+
 h1 {
   font-family: $primary-font;
     color: $product-color;
@@ -42,6 +98,7 @@ body {
   color: $product-color;
   font-size: 70px;
   line-height: 80px;
+  letter-spacing: -3px;
 }
 
 .big-headline-text-second {
@@ -49,6 +106,7 @@ body {
   color: $text-color;
   font-size: 70px;
   line-height: 80px;
+  letter-spacing: -3px;
 }
 
 .description-text {
@@ -56,6 +114,15 @@ body {
   color: $text-color;
   font-size: 30px;
   line-height: 40px;
+  letter-spacing: -1px;
+}
+
+@mixin description-text {
+  font-family: $secondary-font;
+  color: $text-color;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -1px;
 }
 
 h2 {
@@ -63,6 +130,7 @@ h2 {
   color: $text-color;
   font-size: 30px;
   line-height: 40px;
+  
 }
 
 h3 {
@@ -78,23 +146,18 @@ h4 {
   font-size: 17px;
 }
 
+@mixin h4 {
+  font-family: $secondary-font;
+  color: $text-color;
+  font-size: 17px;
+}
+
 p {
   font-family: $secondary-font;
   font-weight: $font-ligth; //light
   color: $text-color;
   font-size: 17px;
   line-height: 25px;
-}
-
-.mainList {
-  font-family: $primary-font;
-  color: $text-color;
-  font-size: 19px;
-  line-height: 26px;
-}
-
-.mainList:active {
-  color: $product-color;
 }
 
 button {
@@ -109,28 +172,21 @@ button {
   font-weight: $font-regular;
 }
 
+@mixin tab {
+  font-family: $secondary-font;
+  size: 17px;
+  color: $text-color;
+  font-weight: $font-regular;
+
+  &:active {
+    font-weight: bold;
+    text-decoration: underline solid $secondary-color 3px;
+  }
+}
+
 .tab:active {
   font-weight: bold;
   text-decoration: underline solid $secondary-color 3px;
-}
-
-
-
-label {
-  font-family: $secondary-font;
-  size: 13px;
-  color: $text-color;
-  font-weight: $font-ligth;
-}
-
-input {
-  border: none;
-  background: transparent;
-  border-bottom: 2px dotted #000;
-  font-family: $secondary-font;
-  size: 30px;
-  color: $text-color;
-  font-weight: $font-regular;
 }
 
 .container {
@@ -140,7 +196,14 @@ input {
   padding: 0;
   outline:0;
 }
-
+.container_second {
+  display: flex;
+  flex-direction: column ;
+  margin: 0;
+  padding: 0;
+  outline:0;
+  background-color: white;
+}
 
 .footer {
   background-color: $product-color;
@@ -149,6 +212,12 @@ input {
   flex-direction: column;
   font-family: $secondary-font;
   font-weight: $font-ligth;
+
+  @include for-phone-only {    
+    flex-flow: column;
+    padding: 0;
+ }
+
 }
 
 .footer__lists {
@@ -158,18 +227,24 @@ input {
   padding: $space;
   padding-top: $x-large;
   padding-bottom: $xx-large;
+
+  @include for-phone-only {    
+    flex-flow: column;
+    padding: 0;
+ }
+  
 }
 
-@media all and (max-width: 1000px) {
-  .footer__lists {
-    flex-flow: column;
-    padding: 0;
-  }
-  .footer {
-    flex-flow: column;
-    padding: 0;
-  }
-}
+// @media all and (max-width: 1000px) {
+//   .footer__lists {
+//     flex-flow: column;
+//     padding: 0;
+//   }
+//   .footer {
+//     flex-flow: column;
+//     padding: 0;
+//   }
+// }
 
 
 .footer__list {
@@ -354,6 +429,19 @@ input {
   margin-left: $large;
 }
 
+.header__storeIcons {
+  width:420px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+ .header__storeIconImg {
+  height:60px;
+}
+
 .handImage {
   z-index:3;
   position: absolute;
@@ -401,7 +489,7 @@ input {
   background-color: white;
 }
 
-.products__tiles {
+.product__tiles {
   display: flex;
   flex-direction: row;
   
@@ -427,7 +515,7 @@ input {
   margin:0;
   padding:0;
   border:0;
-  
+
 }
 
 .textwrapper{
@@ -460,9 +548,595 @@ input {
 }
 
 .features {
-  margin-left: $space;
   margin-top: $xx-large;
 }
+
+.features__main {
+  display: flex;
+  flex-direction: column;
+  background-color: $product-color;
+  padding-left: $space;
+  padding-right: $space;
+  align-content: space-between;
+  background-image: url('Layer 78.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+
+.features__title {
+  margin-left: $space;
+}
+
+.features__top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.features__rightSide {
+  width: 740px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  margin-left: $xx-large;
+}
+
+.features__bottom p {
+  text-align: center;
+  color: white;
+}
+
+.features__bottom hr {
+  border-top: 1px dashed white;
+  color: transparent;
+}
+
+
+
+.features__subtitle {
+  margin-bottom: $xx-large;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -3px;
+  line-height: 60px;
+  width: 540px;
+
+}
+
+.features__phoneImg {
+  margin-left: auto;
+  padding: 0;
+}
+
+.features__text {
+  margin-left: auto;
+  margin-bottom: $x-large;
+  width: 540px;
+}
+.features__text p {
+  color: white;
+}
+
+
+.roomBooking {
+  display: flex;
+  flex-direction: row;
+  margin-left: $space;
+  margin-right: $space;
+  margin-top: $large;
+  justify-content: space-between;
+  margin-bottom:0;
+  padding:0;
+  outline:0;
+  background-color: white;
+}
+
+.roomBooking__textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.roomBooking__title {
+padding-top: $large;
+}
+
+.roomBooking__text {
+  width: 412px;
+}
+
+.roomBooking__phone {
+  margin:0;
+  padding:0;
+}
+
+.roomBooking__phoneText {
+  padding-top: $x-large;
+  line-height: $base;
+  margin-right: $xx-large;
+
+}
+
+.mainList {
+  margin:0;
+  padding:0;  
+  outline:0;
+  margin-left: $space*0.9;
+  margin-right: $space*0.9;
+}
+
+
+.mainListItem {
+  font-family: $primary-font;
+  color: $text-color;
+  font-size: 19px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  height: $large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 0 $space*0.1;
+}
+
+
+
+.mainList ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid rgb(243, 243, 243);
+  border-left: none;
+  border-right: none;
+  margin:0; 
+}
+
+.mainList ul li {
+  // padding: 8px 16px;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  margin:0;  
+}
+
+.mainList ul li:last-child {
+  border-bottom: none;
+  margin:0;
+}
+
+
+.mainListItem:active {
+  color: $product-color;
+}
+
+.info {
+  margin: 0 $space;
+  margin-top: $large;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__itemTitle {
+
+}
+
+.info__itemText {
+  width: 528px;
+}
+
+.downloadPanel {
+  margin: $large $space*0.9;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: $x-small;
+  padding-bottom: $x-small;
+  align-items: center;
+}
+
+.downloadPanel__title {
+  margin-left:$space*0.1;
+}
+
+.downloadPanel__spec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.downloadPanel__specElem {
+  padding: 0 $small;  
+}
+
+.downloadPanel__specElem_light p {
+  opacity: 0.05;
+  font-size: 50px;
+  padding: 0 $small; 
+  font-weight: $font-ligth;
+}
+
+
+.downloadPanel_btn {
+  margin-right:$space*0.1;
+
+  background-color: Transparent; 
+  outline: none;
+  border: none;
+  color: $text-color;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  // display: inline-block;
+  font-size: 17px;
+  font-family: $secondary-font;
+  font-weight: $font-regular;
+
+  color: white;
+  background-color: $product-color;
+  padding: $small $large;
+  font-weight: $font-ligth;
+}
+
+
+.bringTo21St {
+  margin-left: $space;
+  display: flex;
+  flex-direction: column;
+}
+
+.bringTo21St__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bringTo21St__textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bringTo21St__title {
+  margin-top: $x-large;
+}
+
+.bringTo21St__text {
+  margin-top: $x-large;
+}
+.bringTo21St__img {
+  margin-bottom: $x-large;
+  margin-left: $large;
+}
+
+.bringTo21St__down {
+  margin-right: $space;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bringTo21St__downItem {
+  display: flex;
+  flex-direction: column;  
+  width: 520px;
+}
+
+.partners {
+  margin-left: $space;
+  margin-right: $space;
+  display: flex;
+  flex-direction: column;
+}
+
+.partners__title h2 {
+  font-size: 50px;
+  letter-spacing: -2px;
+
+}
+
+.partners__text {
+  margin-bottom: $large;
+}
+
+.partners__list {
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+}
+
+.partners__listItem {
+  display: flex;
+  flex-direction: column;
+  width: 301px;
+}
+
+.partners__listItemImage {
+  margin-bottom: $medium;
+}
+
+// .ekosystem {
+//   margin-left: $space;
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: $xx-large;
+// }
+
+// .ekosystem__top {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: flex-end;
+//   // border-style: 3px solid pink;
+// }
+
+// .ekosystem__topWrapper {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .ekosystem_topImage {
+
+// }
+
+// .ekosystem__title {
+//   width: 665px;
+//   margin-bottom: $x-large;
+// }
+
+// .ekosystem__text {
+//   width: 724px;
+//   margin-bottom: $x-large;
+// }
+
+// .ekosystem__bottom {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .ekosystem__bottomItem {
+//   display: flex;
+//   flex-direction: column;
+//   margin-right: $space;
+//   justify-content: space-between;
+// }
+
+// .ekosystem__bottomItemTitle {
+//   margin-bottom: $medium;
+// }
+
+// .ekosystem__bottomItemText {
+//   margin:0;
+//   padding:0;
+//   width: 530px;
+// }
+
+
+.ekosystem {
+  margin: $xx-large $space 0;
+  display: flex;
+  flex-direction: column;
+
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  &m__topWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__topImage {
+    img {
+      object-fit: scale-down;
+    }
+  }
+
+  &__title {
+    width: 665px;
+    margin-bottom: $x-large;
+  }
+
+  &__text {
+    width: 724px;
+    margin-bottom: $x-large;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__bottomItem {
+    display: flex;
+    flex-direction: column;
+    margin-right: $space;
+    justify-content: space-between;
+  }
+
+  &__bottomItemTitle {
+    margin-bottom: $medium;
+  }
+
+  &__bottomItemText {
+    margin:0;
+    padding:0;
+    width: 530px;
+  }
+}
+
+.store {
+  padding: $xx-large $space;
+  display: flex;
+  flex-direction: row;
+  margin-top: $xx-large;
+  background-color: $background-color;
+  // justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {    
+    @include h0($text-color);
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    
+  }
+
+  &__text {
+    width: 320px;
+    margin: $x-small 0;
+  }
+
+  &__btn {
+    @include button-design();
+    width: 205px;
+  }
+
+  &__right {
+    position: relative; 
+    margin-left: 1.8 * $xx-large;
+    top: $large;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__imgPrinter {
+    position: absolute; 
+    z-index:3;
+  }
+
+  &__imgLobby {
+    position: absolute; 
+    z-index:2;
+    left:150px;
+  }
+
+  &__imgUchwyt {
+    position: absolute; 
+    z-index:1;
+    left:410px;
+  }
+
+}
+
+
+.faq {
+
+  padding: $large $space;
+  display: flex;
+  flex-direction: row;
+  margin-top: $xx-large;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+
+  &__title {    
+    @include h0($text-color);
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    width: 2.25 * $xx-large;
+    
+  }
+
+  &__questions {
+    @include h4;
+    width: 2.5 * $xx-large;
+    line-height: $base;
+  }
+
+  &__answer {
+    margin-top: $base;
+    margin-bottom: $medium;
+    font-weight: $font-ligth;
+
+      &--underlined {
+        text-decoration: underline;
+    }
+  }
+}
+
+  .contact {
+    margin: $large $space 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      width: 30%;
+      // justify-content: space-between;
+      margin-bottom: $x-large;
+    }
+
+    &__navItem {
+      @include tab;
+      margin-left: $base;
+    }
+
+    &__form {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr; 
+      grid-template-columns: 1fr 1fr; 
+      column-gap: $xx-large;
+      row-gap: $medium;
+      grid-template-areas:
+        "contact__formItem-name contact__formItem-lastname"
+        "contact__formItem-phone contact__formItem-email"
+        "contact__formItem-message contact__formItem-message";       
+    }
+
+    &__formItem {
+      border-bottom: 1px dashed #2A2A2A;
+
+    }
+
+    &__formItem-message {      
+    }
+
+    &__formItemLabel {
+      font-size: 13px;
+      font-weight: $font-ligth;
+      font-family: $secondary-font;
+      color: $text-color;
+    }
+
+    &__formItemInput {
+      border: none;
+      background: transparent;      
+      font-family: $secondary-font;
+      size: 30px;
+      height: $large;
+      color: $text-color;
+      font-weight: $font-regular;
+      width: 6 * $x-large;        
+      @include description-text();
+      @include placeholder-color($text-color);     
+      
+    }
+
+    &__btn {
+      margin-top: $medium;
+      width: 2 * $xx-large;
+      @include button-design();
+    }
+
+  }
+
+  
 
 
 
