@@ -80,23 +80,6 @@ button {
   text-decoration: underline solid #01ffcb 3px;
 }
 
-label {
-  font-family: "Roboto", sans-serif;
-  size: 13px;
-  color: #000000;
-  font-weight: 300;
-}
-
-input {
-  border: none;
-  background: transparent;
-  border-bottom: 2px dotted #000;
-  font-family: "Roboto", sans-serif;
-  size: 30px;
-  color: #000000;
-  font-weight: 400;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -307,6 +290,18 @@ input {
   z-index: 1;
   margin-top: 40px;
   margin-left: 60px;
+}
+
+.header__storeIcons {
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header__storeIconImg {
+  height: 60px;
 }
 
 .handImage {
@@ -699,10 +694,9 @@ input {
 }
 
 .ekosystem {
-  margin-left: 340px;
+  margin: 120px 340px 0;
   display: flex;
   flex-direction: column;
-  margin-top: 120px;
 }
 
 .ekosystem__top {
@@ -714,6 +708,10 @@ input {
 .ekosystemm__topWrapper {
   display: flex;
   flex-direction: column;
+}
+
+.ekosystem__topImage img {
+  object-fit: scale-down;
 }
 
 .ekosystem__title {
@@ -857,4 +855,106 @@ input {
 
 .faq__answer--underlined {
   text-decoration: underline;
+}
+
+.contact {
+  margin: 60px 340px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__nav {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin-bottom: 90px;
+}
+
+.contact__navItem {
+  font-family: "Roboto", sans-serif;
+  size: 17px;
+  color: #000000;
+  font-weight: 400;
+  margin-left: 30px;
+}
+
+.contact__navItem:active {
+  font-weight: bold;
+  text-decoration: underline solid #01ffcb 3px;
+}
+
+.contact__form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 120px;
+  row-gap: 40px;
+  grid-template-areas: "contact__formItem-name contact__formItem-lastname" "contact__formItem-phone contact__formItem-email" "contact__formItem-message contact__formItem-message";
+}
+
+.contact__formItem {
+  border-bottom: 1px dashed #2A2A2A;
+}
+
+.contact__formItemLabel {
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+.contact__formItemInput {
+  border: none;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+  size: 30px;
+  height: 60px;
+  color: #000000;
+  font-weight: 400;
+  width: 540px;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+.contact__formItemInput::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #000000;
+}
+
+.contact__formItemInput:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #000000;
+}
+
+.contact__formItemInput::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #000000;
+}
+
+.contact__formItemInput:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #000000;
+}
+
+.contact__btn {
+  margin-top: 40px;
+  width: 240px;
+  background-color: Transparent;
+  outline: none;
+  border: none;
+  color: #000000;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: #3146ff;
+  padding: 20px 60px;
+  font-weight: 300;
 }

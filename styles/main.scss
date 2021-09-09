@@ -41,6 +41,21 @@ $space: 340px;
   @media (min-width: 1800px) { @content; }
 }
 
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}
+
 @mixin h0($color: $product-color) {
   font-family: $primary-font;
   color: $color;
@@ -102,6 +117,14 @@ body {
   letter-spacing: -1px;
 }
 
+@mixin description-text {
+  font-family: $secondary-font;
+  color: $text-color;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
 h2 {
   font-family: $primary-font;
   color: $text-color;
@@ -149,28 +172,21 @@ button {
   font-weight: $font-regular;
 }
 
+@mixin tab {
+  font-family: $secondary-font;
+  size: 17px;
+  color: $text-color;
+  font-weight: $font-regular;
+
+  &:active {
+    font-weight: bold;
+    text-decoration: underline solid $secondary-color 3px;
+  }
+}
+
 .tab:active {
   font-weight: bold;
   text-decoration: underline solid $secondary-color 3px;
-}
-
-
-
-label {
-  font-family: $secondary-font;
-  size: 13px;
-  color: $text-color;
-  font-weight: $font-ligth;
-}
-
-input {
-  border: none;
-  background: transparent;
-  border-bottom: 2px dotted #000;
-  font-family: $secondary-font;
-  size: 30px;
-  color: $text-color;
-  font-weight: $font-regular;
 }
 
 .container {
@@ -411,6 +427,19 @@ input {
   z-index:1;
   margin-top: $medium;
   margin-left: $large;
+}
+
+.header__storeIcons {
+  width:420px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+ .header__storeIconImg {
+  height:60px;
 }
 
 .handImage {
@@ -889,10 +918,9 @@ justify-content: space-between;
 
 
 .ekosystem {
-  margin-left: $space;
+  margin: $xx-large $space 0;
   display: flex;
   flex-direction: column;
-  margin-top: $xx-large;
 
 
   &__top {
@@ -906,8 +934,10 @@ justify-content: space-between;
     flex-direction: column;
   }
 
-  &_topImage {
-
+  &__topImage {
+    img {
+      object-fit: scale-down;
+    }
   }
 
   &__title {
@@ -1010,6 +1040,7 @@ justify-content: space-between;
   margin-top: $xx-large;
   justify-content: space-between;
   align-items: flex-start;
+  
 
   &__title {    
     @include h0($text-color);
@@ -1036,6 +1067,78 @@ justify-content: space-between;
     }
   }
 }
+
+  .contact {
+    margin: $large $space 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      width: 30%;
+      // justify-content: space-between;
+      margin-bottom: $x-large;
+    }
+
+    &__navItem {
+      @include tab;
+      margin-left: $base;
+    }
+
+    &__form {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr; 
+      grid-template-columns: 1fr 1fr; 
+      column-gap: $xx-large;
+      row-gap: $medium;
+      grid-template-areas:
+        "contact__formItem-name contact__formItem-lastname"
+        "contact__formItem-phone contact__formItem-email"
+        "contact__formItem-message contact__formItem-message";       
+    }
+
+    &__formItem {
+      border-bottom: 1px dashed #2A2A2A;
+
+    }
+
+    &__formItem-message {      
+    }
+
+    &__formItemLabel {
+      font-size: 13px;
+      font-weight: $font-ligth;
+      font-family: $secondary-font;
+      color: $text-color;
+    }
+
+    &__formItemInput {
+      border: none;
+      background: transparent;      
+      font-family: $secondary-font;
+      size: 30px;
+      height: $large;
+      color: $text-color;
+      font-weight: $font-regular;
+      width: 6 * $x-large;        
+      @include description-text();
+      @include placeholder-color($text-color);     
+      
+    }
+
+    &__btn {
+      margin-top: $medium;
+      width: 2 * $xx-large;
+      @include button-design();
+    }
+
+  }
+
+  
+
+
 
 
 

@@ -49,7 +49,10 @@
                         Staying connected has never been easier with<br />
                         zonifero WorkPlace.
                     </span>
-                    <button class="header__btn" style="width:420px;height:70px;background-color: black;">google play</button>                    
+                    <div class="header__storeIcons">
+                        <img class="header__storeIconImg" src="./images/Images/googleplay.png" alt="google play" />
+                        <img class="header__storeIconImg" src="./images/Images/appstore.png" alt="app store" />
+                    </div>                   
                 </div>
                 <div class="header__mainImages">
                     <img src="./images/Images/hand.png" class="handImage" alt="hand">
@@ -345,7 +348,7 @@
                         Zarządzaj świadomie rozwojem biura, optymalizuj koszty związane z usługami i powierzchnią  a także podnoś komfort pracy dzięki jednemu systemowi.                    
                     </div>
                 </div>
-                <div class="ekosystem_topImage">
+                <div class="ekosystem__topImage">
                     <img src="./images/Images/devices.png" alt="devices">
                 </div>
             </div>
@@ -427,26 +430,38 @@
             </div>
         </section>
 
-        <section class="contactForm">
-            <nav class="contactForm__nav">
-                <a>Contact form</a>
-                <a>Call us</a>
+        <div class="contact">
+            <nav class="contact__nav">
+                <a class="contact__navItem">Contact form</a>
+                <a class="contact__navItem">Call us</a>
             </nav>
-            <form>
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname">
-                <label for="lname">Family name:</label>
-                <input type="text" id="lname" name="lname">
-                <label for="yphone">Your phone:</label>
-                <input type="text" id="yphone" name="yphone">
-                <label for="yemail">Your e-mail:</label>
-                <input type="text" id="yemail" name="yemail">
-                <label for="message">Message:</label>
-                <input type="text" id="message" name="message">
-
-                <button>Send message</button>
+            <form class="contact__form">
+                <div class="contact__formItem contact__formItem-name">
+                    <label class="contact__formItemLabel" for="fname">First name *</label><br/>
+                    <input class="contact__formItemInput" type="text" id="fname" name="fname">
+                </div>
+                <div class="contact__formItem contact__formItem-lastname">
+                    <label class="contact__formItemLabel" for="lname">Family name *</label><br/>
+                    <input class="contact__formItemInput" type="text" id="lname" name="lname">
+                </div>
+                <div class="contact__formItem contact__formItem-phone">
+                    <label class="contact__formItemLabel" for="yphone">Your phone</label><br/>
+                    <input class="contact__formItemInput" type="text" id="yphone" name="yphone">
+                </div>
+                <div class="contact__formItem contact__formItem-email">
+                    <label class="contact__formItemLabel" for="yemail">Your e-mail *</label><br/>
+                    <input class="contact__formItemInput" type="text" id="yemail" name="yemail" placeholder="johnwick@hollywood.com">
+                </div>
+                <div class="contact__formItem contact__formItem-message">
+                    <label class="contact__formItemLabel" for="message">Message *</label><br/>
+                    <input class="contact__formItemInput" type="text" id="message" name="message">                    
+                </div>
+                
             </form>
-        </section>
+            <button class="contact__btn">
+                Send message
+            </button>
+        </div>
 
         <section class="products">
             <h4>Zonifero product family</h4>
