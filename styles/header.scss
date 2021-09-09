@@ -3,6 +3,10 @@
 .header {  
     display: flex;
     flex-direction: column;
+
+    @include for-phone-only {    
+      display: none;
+   }
   }
   
   .header__main {

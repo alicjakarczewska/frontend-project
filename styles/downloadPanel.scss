@@ -10,6 +10,10 @@
   padding-top: $x-small;
   padding-bottom: $x-small;
   align-items: center;
+
+  @include for-phone-only {    
+    display: none;
+ }
 }
 
 .downloadPanel__title {

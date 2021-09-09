@@ -3,6 +3,10 @@
 .problemSolving {
     margin-left: $space;
     margin-top: $xx-large;
+
+    @include for-phone-only {    
+      display: none;
+   }
   }
   
   .problemSolving__tiles {

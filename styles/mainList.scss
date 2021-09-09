@@ -6,6 +6,10 @@
   outline:0;
   margin-left: $space*0.9;
   margin-right: $space*0.9;
+
+  @include for-phone-only {    
+    display: none;
+ }
 }
 
 

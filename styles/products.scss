@@ -4,6 +4,10 @@
   padding-left: $space;
   padding-top: $xx-large;
   background-color: white;
+
+  @include for-phone-only {    
+    display: none;
+ }
 }
 
 .product__tiles {

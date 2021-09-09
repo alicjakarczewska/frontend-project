@@ -19,4 +19,8 @@
   &__itemText {
     width: 528px;
   }
+
+  @include for-phone-only {    
+    display: none;
+ }
 }

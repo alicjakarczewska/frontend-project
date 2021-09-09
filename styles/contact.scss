@@ -66,4 +66,8 @@
         @include button-design();
     }
 
+    @include for-phone-only {    
+        display: none;
+     }
+
 }

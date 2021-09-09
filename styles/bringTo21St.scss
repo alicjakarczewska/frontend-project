@@ -41,4 +41,8 @@
         flex-direction: column;  
         width: 520px;
     }
+
+    @include for-phone-only {    
+        display: none;
+     }
 }
