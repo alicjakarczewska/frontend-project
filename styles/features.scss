@@ -10,18 +10,21 @@
   .features__main {
     display: flex;
     flex-direction: column;
-    background-color: $product-color;
-    padding-left: $space;
-    padding-right: $space;
+    margin: 0 auto;    
     align-content: space-between;
     background-image: url('Layer 78.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
+    background-color: $product-color;
+    justify-content: center;
   }
   
   
   .features__title {
-    margin-left: $space;
+    // margin-left: $space;
+    margin: 0 auto;
+    width: $desktop-page-width;
+    
   }
   
   .features__top {
@@ -29,10 +32,12 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    margin: 0 auto;
+    width: $desktop-page-width;
   }
   
   .features__rightSide {
-    width: 740px;
+    // width: 740px;
     display: flex;
     flex-direction: column;
     align-content: flex-end;
@@ -50,24 +55,23 @@
   }
   
   
-  
   .features__subtitle {
     margin-bottom: $xx-large;
     font-size: 50px;
-    color: #FFFFFF;
     letter-spacing: -3px;
     line-height: 60px;
     width: 540px;
-  
+    color: white;
+    font-family: $primary-font;
   }
   
   .features__phoneImg {
-    margin-left: auto;
+    // margin-left: auto;
     padding: 0;
   }
   
   .features__text {
-    margin-left: auto;
+    // margin-left: auto;
     margin-bottom: $x-large;
     width: 540px;
   }

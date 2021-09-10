@@ -1,5 +1,12 @@
 @import './main';
 
+.footer-wrapper {
+  background-color: $product-color;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
     background-color: $product-color;
     color: white;
@@ -7,10 +14,13 @@
     flex-direction: column;
     font-family: $secondary-font;
     font-weight: $font-ligth;
+    
+    
   
     @include for-phone-only {    
       flex-flow: column;
-      padding: 0;
+      padding: $x-large 0 0 0;    
+      margin: 0;  
    }
   
   }
@@ -19,7 +29,8 @@
     display: flex;
     flex-wrap: row wrap;  
     list-style: none; 
-    padding: $space;
+    margin: 0 auto;
+    width: $desktop-page-width;
     padding-top: $x-large;
     padding-bottom: $xx-large;
   
@@ -31,7 +42,7 @@
   }
   
   .footer__list {
-    padding-right: $xx-large;
+    // padding-right: $xx-large;
   }
   
   .footer__listTitle {
@@ -45,10 +56,19 @@
     opacity: 0.2;
     background-color: #E8E9EB;
   }
-  
-  .footer__logo img {
+  .footer__logo{
+    margin: 0 auto;
+    width: $desktop-page-width;
+  }
+
+  .footer__logo img {    
     float: right;
-    padding-right: $base;
+    // padding-right: $base;
     padding-top: $medium;
     padding-bottom: $xx-large;
+
+    @include for-phone-only {    
+      flex-flow: column;
+      padding-bottom:$small;
+   }
   }

@@ -4,14 +4,11 @@
 .roomBooking {
     display: flex;
     flex-direction: row;
-    margin-left: $space;
-    margin-right: $space;
     margin-top: $large;
     justify-content: space-between;
     margin-bottom:0;
     padding:0;
     outline:0;
-    background-color: white;
 
     @include for-phone-only {    
       display: none;

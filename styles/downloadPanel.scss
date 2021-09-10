@@ -2,7 +2,7 @@
 
 
 .downloadPanel {
-  margin: $large $space*0.9;
+  margin: $large auto;
   background-color: $background-color;
   display: flex;
   flex-direction: row;
@@ -10,6 +10,7 @@
   padding-top: $x-small;
   padding-bottom: $x-small;
   align-items: center;
+  width: 100%;
 
   @include for-phone-only {    
     display: none;

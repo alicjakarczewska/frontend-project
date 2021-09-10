@@ -1,15 +1,25 @@
 @import './main';
+.store-wrapper {
+  background-color: $background-color;
+}
 
 .store {
-    padding: $xx-large $space;
+    width: $desktop-page-width;
+    margin: 0 auto;
+    padding-top: 2* $x-large;
+    padding-bottom: $x-large;
     display: flex;
     flex-direction: row;
     margin-top: $xx-large;
     background-color: $background-color;
+    align-items: center;
+    justify-content: space-between;
+    
   
     &__left {
       display: flex;
       flex-direction: column;
+      flex: 1;
     }
   
     &__title {    
@@ -17,6 +27,11 @@
       font-size: 50px;
       line-height: 60px;
       letter-spacing: -1px;
+
+      @include for-phone-only { 
+        font-size: $font-mobile-title;
+        line-height: $font-mobile-title-line-height;
+     }
       
     }
   
@@ -24,18 +39,45 @@
       width: 320px;
       margin: $x-small 0;
     }
+
+    &__image {
+      display: none;
+      @include for-phone-only {    
+        display: block;
+        padding-left: $x-small;
+
+     }
+    }
+
+    &____mobileImage {
+
+    }
   
     &__btn {
       @include button-design();
       width: 205px;
+      @include for-phone-only {
+        margin-top: $base;
+        margin-left: 20%;
+     }
+    }
+
+    &__right {
+      flex: 1;
+      @include for-phone-only {    
+        display: none;
+     }
     }
   
-    &__right {
+    &__images {
       position: relative; 
-      margin-left: 1.8 * $xx-large;
-      top: $large;
+      // margin-left: 1.8 * $xx-large;
+      top: $xx-large;
       display: flex;
       align-items: flex-end;
+      @include for-phone-only {    
+        display: none;
+     }
     }
   
     &__imgPrinter {
@@ -56,7 +98,8 @@
     }
 
     @include for-phone-only {    
-      display: none;
+      margin: 0 0 $xx-large 0;
+      padding: $large 0 $base $small;
    }
   
   }

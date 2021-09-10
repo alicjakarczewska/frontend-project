@@ -1,7 +1,7 @@
 @import './main';
 
 .problemSolving {
-    margin-left: $space;
+    margin: 0 auto;
     margin-top: $xx-large;
 
     @include for-phone-only {    

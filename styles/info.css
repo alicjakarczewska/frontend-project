@@ -86,32 +86,37 @@ button {
   margin: 0;
   padding: 0;
   outline: 0;
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.container_second {
+.background-second {
+  background-color: white;
+}
+
+.container-second {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   outline: 0;
+  width: 1200px;
+  margin: 0 auto;
   background-color: white;
 }
 
 .info {
-  margin: 0 340px;
+  margin: 0 auto;
   margin-top: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 10%;
 }
 
 .info__item {
   display: flex;
   flex-direction: column;
-}
-
-.info__itemText {
-  width: 528px;
 }
 
 @media (max-width: 599px) {

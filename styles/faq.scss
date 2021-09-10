@@ -2,7 +2,7 @@
 
 .faq {
 
-    padding: $large $space;
+    // padding: $large $space;
     display: flex;
     flex-direction: row;
     margin-top: $xx-large;
@@ -19,6 +19,8 @@
       width: 2.25 * $xx-large;
       @include for-phone-only {    
         margin-bottom: $small;
+        font-size: $font-mobile-title;
+        line-height: $font-mobile-title-line-height;
      }
       
     }

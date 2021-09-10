@@ -22,7 +22,12 @@ $font-ligth: 300;
 $font-regular: 400;
 $font-bold: 700;
 
+// font-size
+$font-mobile-title: 35px;
+$font-mobile-title-line-height: 45px;
+
 $space: 340px;
+$desktop-page-width: 1200px;
 
 
 @mixin for-phone-only {
@@ -196,14 +201,21 @@ button {
   margin: 0;
   padding: 0;
   outline:0;
-
-  
+  width: $desktop-page-width;
+  margin: 0 auto;
 }
-.container_second {
+
+.background-second{
+  background-color: white;
+}
+
+.container-second {
   display: flex;
   flex-direction: column ;
   margin: 0;
   padding: 0;
   outline:0;
+  width: $desktop-page-width;
+  margin: 0 auto;
   background-color: white;
 }

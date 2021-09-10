@@ -86,14 +86,11 @@ button {
   margin: 0;
   padding: 0;
   outline: 0;
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.container_second {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  outline: 0;
+.container__second {
   background-color: white;
 }
 
@@ -110,17 +107,18 @@ button {
 .features__main {
   display: flex;
   flex-direction: column;
-  background-color: #3146ff;
-  padding-left: 340px;
-  padding-right: 340px;
+  margin: 0 auto;
   align-content: space-between;
   background-image: url("Layer 78.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  background-color: #3146ff;
+  justify-content: center;
 }
 
 .features__title {
-  margin-left: 340px;
+  margin: 0 auto;
+  width: 1200px;
 }
 
 .features__top {
@@ -128,10 +126,11 @@ button {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 1200px;
 }
 
 .features__rightSide {
-  width: 740px;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
@@ -151,19 +150,18 @@ button {
 .features__subtitle {
   margin-bottom: 120px;
   font-size: 50px;
-  color: #FFFFFF;
   letter-spacing: -3px;
   line-height: 60px;
   width: 540px;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 .features__phoneImg {
-  margin-left: auto;
   padding: 0;
 }
 
 .features__text {
-  margin-left: auto;
   margin-bottom: 90px;
   width: 540px;
 }

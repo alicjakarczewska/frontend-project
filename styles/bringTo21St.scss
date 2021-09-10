@@ -1,7 +1,7 @@
 @import './main';
 
 .bringTo21St {
-    margin-left: $space;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 
@@ -30,16 +30,17 @@
     }
 
     &__down {
-        margin-right: $space;
+        // margin-right: $space;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 10%;
     }
 
     &__downItem {
         display: flex;
         flex-direction: column;  
-        width: 520px;
+        // width: 520px;
     }
 
     @include for-phone-only {    
