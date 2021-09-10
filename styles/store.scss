@@ -1,6 +1,9 @@
 @import './main';
 .store-wrapper {
   background-color: $background-color;
+  @include for-phone-only {    
+    display: none;
+ }
 }
 
 .store {

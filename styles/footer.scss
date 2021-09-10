@@ -2,9 +2,16 @@
 
 .footer-wrapper {
   background-color: $product-color;
-  width: 100%;
   margin: 0;
   padding: 0;
+  @include for-phone-only {  
+    width: 100%;
+    // display: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+ }
 }
 
 .footer {
@@ -15,12 +22,12 @@
     font-family: $secondary-font;
     font-weight: $font-ligth;
     
-    
-  
     @include for-phone-only {    
-      flex-flow: column;
-      padding: $x-large 0 0 0;    
-      margin: 0;  
+      flex-flow: column; 
+      padding: 0;
+      margin: 0; 
+      width: 100%;
+      box-sizing: border-box;
    }
   
   }
@@ -37,17 +44,21 @@
     @include for-phone-only {    
       flex-flow: column;
       padding: 0;
+      margin: 0;
+      width: 100%;
    }
     
   }
   
   .footer__list {
-    // padding-right: $xx-large;
   }
   
   .footer__listTitle {
     font-weight: $font-bold;
     padding-bottom: $small;
+    @include for-phone-only {    
+      padding-top: 2 * $medium;
+   }
   }
   
   .footer hr {
@@ -55,20 +66,31 @@
     height: 1px;
     opacity: 0.2;
     background-color: #E8E9EB;
+    @include for-phone-only {    
+      margin-top: 2 * $medium;
+   }
   }
   .footer__logo{
     margin: 0 auto;
     width: $desktop-page-width;
+    @include for-phone-only {    
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
   }
 
   .footer__logo img {    
     float: right;
-    // padding-right: $base;
     padding-top: $medium;
     padding-bottom: $xx-large;
 
-    @include for-phone-only {    
-      flex-flow: column;
-      padding-bottom:$small;
+    @include for-phone-only { 
+      padding:0; 
+      margin: $small;
+      margin-top: $medium;
+      
    }
+  
   }

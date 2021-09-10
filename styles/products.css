@@ -90,6 +90,12 @@ button {
   margin: 0 auto;
 }
 
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+  }
+}
+
 .background-second {
   background-color: white;
 }
@@ -105,9 +111,21 @@ button {
   background-color: white;
 }
 
+@media (max-width: 599px) {
+  .container-second {
+    width: 100%;
+  }
+}
+
 .products {
   margin-top: 120px;
   background-color: white;
+}
+
+@media (max-width: 599px) {
+  .products {
+    display: none;
+  }
 }
 
 .products__mainTitle {

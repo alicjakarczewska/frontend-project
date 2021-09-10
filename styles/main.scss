@@ -28,6 +28,7 @@ $font-mobile-title-line-height: 45px;
 
 $space: 340px;
 $desktop-page-width: 1200px;
+$mobile-page-width: 350px;
 
 
 @mixin for-phone-only {
@@ -100,6 +101,14 @@ body {
 }
 
 .big-headline-text {
+  font-family: $primary-font;
+  color: $product-color;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: -3px;
+}
+
+@mixin big-headline-text {
   font-family: $primary-font;
   color: $product-color;
   font-size: 70px;
@@ -198,24 +207,48 @@ button {
 .container {
   display: flex;
   flex-direction: column ;
-  margin: 0;
   padding: 0;
   outline:0;
   width: $desktop-page-width;
   margin: 0 auto;
+  @include for-phone-only {  
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
 }
 
 .background-second{
   background-color: white;
+  @include for-phone-only {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
 }
 
 .container-second {
   display: flex;
   flex-direction: column ;
-  margin: 0;
   padding: 0;
   outline:0;
   width: $desktop-page-width;
   margin: 0 auto;
   background-color: white;
+
+  @include for-phone-only {
+    width: 100%;  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
+
+// html {
+//   overflow-x: hidden;
+// }
+// body {
+//   overflow-x: hidden;
+// }

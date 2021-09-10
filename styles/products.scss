@@ -3,6 +3,9 @@
 .products {
   margin-top: $xx-large;  
   background-color: white;
+  @include for-phone-only {    
+    display: none;
+ }
 
   &__mainTitle{
 

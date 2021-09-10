@@ -83,21 +83,37 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding: 0;
   outline: 0;
   width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .background-second {
   background-color: white;
 }
 
+@media (max-width: 599px) {
+  .background-second {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .container-second {
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding: 0;
   outline: 0;
   width: 1200px;
@@ -105,11 +121,28 @@ button {
   background-color: white;
 }
 
+@media (max-width: 599px) {
+  .container-second {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .footer-wrapper {
   background-color: #3146ff;
-  width: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 599px) {
+  .footer-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .footer {
@@ -124,8 +157,10 @@ button {
 @media (max-width: 599px) {
   .footer {
     flex-flow: column;
-    padding: 90px 0 0 0;
+    padding: 0;
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -143,12 +178,20 @@ button {
   .footer__lists {
     flex-flow: column;
     padding: 0;
+    margin: 0;
+    width: 100%;
   }
 }
 
 .footer__listTitle {
   font-weight: 700;
   padding-bottom: 20px;
+}
+
+@media (max-width: 599px) {
+  .footer__listTitle {
+    padding-top: 80px;
+  }
 }
 
 .footer hr {
@@ -158,9 +201,24 @@ button {
   background-color: #E8E9EB;
 }
 
+@media (max-width: 599px) {
+  .footer hr {
+    margin-top: 80px;
+  }
+}
+
 .footer__logo {
   margin: 0 auto;
   width: 1200px;
+}
+
+@media (max-width: 599px) {
+  .footer__logo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 .footer__logo img {
@@ -171,7 +229,8 @@ button {
 
 @media (max-width: 599px) {
   .footer__logo img {
-    flex-flow: column;
-    padding-bottom: 20px;
+    padding: 0;
+    margin: 20px;
+    margin-top: 40px;
   }
 }

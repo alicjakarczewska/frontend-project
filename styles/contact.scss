@@ -89,9 +89,22 @@
         @include button-design();
     }
 
-    @include for-phone-only {
-        margin: $small $small $large $small;
-        padding: 0;
-        align-items: center;
-    }
+    @include for-phone-only {    
+        box-sizing: border-box;
+        margin: 0;
+        padding: $base;
+        width: 100%;
+     }
+
+    // @include for-phone-only {
+    //     margin: $small $small $large $small;
+    //     padding: 0;
+    //     align-items: center;
+
+        
+    // }
+
+    @include for-phone-only {    
+        // display: none;
+     }
 }

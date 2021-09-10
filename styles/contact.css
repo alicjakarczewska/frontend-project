@@ -83,26 +83,51 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding: 0;
   outline: 0;
   width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .background-second {
   background-color: white;
 }
 
+@media (max-width: 599px) {
+  .background-second {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .container-second {
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding: 0;
   outline: 0;
   width: 1200px;
   margin: 0 auto;
   background-color: white;
+}
+
+@media (max-width: 599px) {
+  .container-second {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .contact {
@@ -241,8 +266,9 @@ button {
 
 @media (max-width: 599px) {
   .contact {
-    margin: 20px 20px 60px 20px;
-    padding: 0;
-    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
   }
 }

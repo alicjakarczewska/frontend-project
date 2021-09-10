@@ -90,8 +90,31 @@ button {
   margin: 0 auto;
 }
 
-.container__second {
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.background-second {
   background-color: white;
+}
+
+.container-second {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+@media (max-width: 599px) {
+  .container-second {
+    width: 100%;
+  }
 }
 
 .problemSolving {
@@ -102,6 +125,7 @@ button {
 @media (max-width: 599px) {
   .problemSolving {
     display: none;
+    margin: 0;
   }
 }
 

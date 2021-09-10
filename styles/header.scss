@@ -1,29 +1,62 @@
 @import './main';
 
+
 .header {  
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
     @include for-phone-only {    
-      display: none;
+      // display: none;
+            
+      box-sizing: border-box;
+      margin: 0;
+      padding: $base;
    }
   }
   
   .header__main {
     display: flex;
     flex-direction: row;
+    width:50%;
+    // flex-wrap: wrap;
+    @include for-phone-only {    
+      flex-direction: column;
+      flex-wrap: wrap;      
+      width:100%;
+      box-sizing: border-box;
+      margin: 0;
+   }
   }
   
   .header__mainText {
     display: flex;
     flex-direction: column;
+
+    .header__imgMobile {
+      display: none;
+      @include for-phone-only {    
+        display: block;
+        padding-bottom: $medium;
+        box-sizing: border-box;
+        margin:0;
+        width: 100%;
+        
+     }
+    }
+    
   }
   .header-listsWrapper {
-    // position:relative;
     width: 1800px;
     z-index: 4;
     background-color: $background-color;
     margin-top: 2 * $x-large;
+    @include for-phone-only {    
+      width: 100%;    
+      box-sizing: border-box;
+      margin: 0; 
+      padding:0;
+   }
   }
 
   .header__lists {
@@ -31,25 +64,73 @@
     flex-direction: row;
     background-color: $background-color;
     width: $desktop-page-width;
-    // margin: 0 auto;
-
-    // padding-top: $medium;
+    flex-wrap: wrap;
     margin-top: $base;
     z-index: 5;
     justify-content: space-between;
+
+    @include for-phone-only {    
+      width: 100%;    
+      box-sizing: border-box;
+      margin: 0; 
+      padding:0;
+   }
   }
   
   .header__listItem {
     width: 300px;
+    @include for-phone-only {    
+      display: none;
+      
+   }
+
   }
+
+  .header__listItem-mobile {
+    display: none;
+    @include for-phone-only {    
+      display: block;
+      margin-top: $xx-large; 
+      display: block;
+      box-sizing: border-box;
+        margin:0;
+      width: 100%;
+      p{
+        font-size: 17px;
+      }
+   }
+    
+   }
   
-  .header__title {
-    padding-top: 170px;
-    padding-bottom: $medium;
+.header__title {
+  padding-top: 170px;
+  padding-bottom: $medium;
+  @include big-headline-text;
+  @include for-phone-only { 
+    padding-top: $medium;   
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+        margin:0;
+  }
+
+  
+    
   }
   
   .header__text{
     padding-bottom: $base;
+    // width: 55%;
+    @include  description-text;
+    @include for-phone-only {
+      box-sizing: border-box;
+        margin:0;   
+      font-size: 22px;
+      line-height: 30px;
+      box-sizing: border-box;
+      width: 100%;
+   }
   }
   
   .header .header__mainText .header__btn {
@@ -60,7 +141,11 @@
     position:relative; 
     z-index:1;
     margin-top: $medium;
-    margin-left: $large;
+    // margin-left: $large;
+    @include for-phone-only {    
+      display: none;
+
+   }
   }
   
   .header__storeIcons {
@@ -69,11 +154,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include for-phone-only {    
+      width:100%;
+      box-sizing: border-box;
+        margin:0;
+   }
+    
   
   }
   
    .header__storeIconImg {
     height:60px;
+    @include for-phone-only {    
+      height:40px;
+      box-sizing: border-box;
+        margin:0;
+   }
   }
   
   .handImage {

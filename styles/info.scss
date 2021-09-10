@@ -11,7 +11,17 @@
   &__item {
     display: flex;
     flex-direction: column;
-
+    @include for-phone-only {    
+      display: none;
+   }
+  }
+  &__item-mobile {
+    display: none;
+    @include for-phone-only {    
+      display: flex;
+      flex-direction: column;
+   }
+    
   }
   
   &__itemTitle {
@@ -23,6 +33,9 @@
   }
 
   @include for-phone-only {    
-    display: none;
+    box-sizing: border-box;
+margin: 0;
+padding: $base;
+width: 100%;
  }
 }
